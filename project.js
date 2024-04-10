@@ -40,6 +40,48 @@ const players = [
             ERA: 3.14,
             IP: 132,
             K: 168
+},
+{
+            name: "Bryce Harper",
+            year: 2021,
+            slash: ".309/.429/.615",
+            OWAR: 6.5,
+            adjustedOPS: "179",
+},
+{
+            name: "Freddie Freeman",
+            year: 2023,
+            slash: ".331/.410/.567",
+            OWAR: 7.5,
+            adjustedOPS: "161",
+},
+{
+            name: "Corey Seager",
+            year: 2021,
+            slash: ".327/.390/.623",
+            OWAR: 6.4,
+            adjustedOPS: "169",
+},
+{
+            name: "Vladimir Guerrero Jr",
+            year: 2021,
+            slash: ".311/.401/.601",
+            OWAR: 6.4,
+            adjustedOPS: "167",
+},
+{
+            name: "Matt Olson",
+            year: 2023,
+            slash: ".283/.389/.604",
+            OWAR: 6.6,
+            adjustedOPS: "162",
+},
+{
+            name: "Fernando Tatis Jr",
+            year: 2021,
+            slash: ".282/.364/.611",
+            OWAR: 7.3,
+            adjustedOPS: "166",
 }
 ];
 
@@ -61,14 +103,17 @@ function getPlayerStats(playerName){
     <p>Year: ${player.year}</p>
     <p>Slash Line: ${player.slash}</p>
     <p>OWAR: ${player.OWAR}</p>
-    <p>Adjusted OPS: ${player.adjustedOPS}</p>
+    <p>OPS+: ${player.adjustedOPS}</p>
   `;
 
-  if (selectedPlayer.hasOwnProperty('ERA')) {
+  if (player.name === 'Shohei Ohtani') {
         statsHTML += `
+          <div class="pitching">
+          <h3> Pitching Stats </h3>
           <p>ERA: ${player.ERA}</p>
           <p>IP: ${player.IP}</p>
           <p>K: ${player.K}</p>
+          </div>
         `;
       }
   
