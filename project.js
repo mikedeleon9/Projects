@@ -1,64 +1,51 @@
-    const playerStatsDiv = document.getElementById("player-stats");
-    const playerSelect = document.getElementById("player-select");
-
+const playerStatsDiv = document.getElementById("player-stats");
+  const playerSelect = document.getElementById("player-select");
 
 playerSelect.addEventListener("change",()=>{
 
     const selectedPlayer = playerSelect.value;
-    const playerStats = getPlayerStats(selectedPlayer);
-    updatePlayerStats(playerStats);
+    getPlayerStats(selectedPlayer);
 
 });
 
-function getPlayerStats(player){
-    let stats ={};
-
-    switch (player){
-        case "Soto":
-            stats ={
-                    year: 2020,
+const players = [
+  {
+                    
                     name: "Juan Soto",
+                    year: 2020,
                     slash: ".351/.490/.695",
                     OWAR: 3.2,
                     adjustedOPS: "217"
-            };
-            break;
-
-        case "Acuna":
-            stats = {
-                    year: 2023,
+  },
+  {
                     name: "Ronald Acuña",
+                    year: 2023,
                     slash: ".337/.416/.596",
                     OWAR: 8.5,
                     adjustedOPS: "168"
-            };
-            break;
+  }
+];
 
-        case "Judge":
-            stats = {
-                year: 2022,
-                name: "Aaron Judge",
-                slash: ".311/.425/.686",
-                OWAR: 10.3,
-                adjustedOPS: "210"
-            };
-            break;
-
-        default:
-            break;
-    }
-        return stats;
-
-    
-}
-
-function updatePlayerStats(stats){
-    playerStatsDiv.innerHTML = `
-    <h2>${stats.name}</h2>
-    <p>Year: ${stats.year}</p>
-    <p>Slash Line: ${stats.slash}</p>
-    <p>Offensive WAR: ${stats.OWAR}</p>
-    <p>OPS+: ${stats.adjustedOPS}</p>
-`   
+function getPlayerStats(playerName){
+      for (let i=0; i < players.length; i++){
+        if (players[i].name === playerName){
+          const selectedPlayer = players[i];
+          
+          displayPlayerStats(selectedPlayer);
+          return;
+        }
+      }
+  }
+  function displayPlayerStats(player) {
+  
+  const statsHTML = `
+    <h3>${player.name}</h3>
+    <p>Year: ${player.year}</p>
+    <p>Slash Line: ${player.slash}</p>
+    <p>OWAR: ${player.OWAR}</p>
+    <p>Adjusted OPS: ${player.adjustedOPS}</p>
+  `;
+    playerStatsDiv.innerHTML = statsHTML;
     playerStatsDiv.classList.remove('hidden');
-}
+    return;
+  }
