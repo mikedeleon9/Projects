@@ -10,6 +10,7 @@
 <body>
     <header>
     <h1>Greatest Statlines Of The 2020s</h1>
+    <p class="summary">Pick from the dropdown to checkout the best stats of the 2020s.</p>
     </header>
 
     <div class="background-container">
@@ -18,20 +19,21 @@
             <div class="selection">
                 <label for="player">Select A Player: </label>
                  <select name="American" id="player-select">
+                    <div class="graphic"></div>
                     <option value="" selected disabled>Select a Player</option>
-                    <option value="Soto">Juan Soto</option>
-                    <option value="Acuna">Ronald Acuña</option>
-                    <option value="Judge">Aaron Judge</option>
-                    <option value="Shohei">Shohei Ohtani</option>
-                    <option value="Harper">Bryce Harper</option>
-                    <option value="Freeman">Freddie Freeman</option>
-                    <option value="Seager">Corey Seager</option>
-                    <option value="Vlad">Vladimir Guerrero Jr</option>
-                    <option value="Olson">Matt Olson</option>
-                    <option value="Tatis">Fernando Tatis Jr</option>
+                    <option value="Juan Soto" data-image="PlayerImages/Soto.jpg">Juan Soto</option>
+                    <option value="Ronald Acuña" data-image="PlayerImages/Acuna.jpg">Ronald Acuña</option>
+                    <option value="Aaron Judge" data-image="PlayerImages/Judge.jpg">Aaron Judge</option>
+                    <option value="Shohei Ohtani" data-image="PlayerImages/Ohtani.jpeg">Shohei Ohtani</option>
+                    <option value="Bryce Harper" data-image="PlayerImages/Harper.jpg">Bryce Harper</option>
+                    <option value="Freddie Freeman" data-image="PlayerImages/Freeman.jpg">Freddie Freeman</option>
+                    <option value="Corey Seager" data-image="PlayerImages/Seager.jpg">Corey Seager</option>
+                    <option value="Vladimir Guerrero Jr" data-image="PlayerImages/Vlad.jpg">Vladimir Guerrero Jr</option>
+                    <option value="Matt Olson" data-image="PlayerImages/Olson.jpeg">Matt Olson</option>
+                    <option value="Fernando Tatis Jr" data-image="PlayerImages/Tatis.jpg">Fernando Tatis Jr</option>
         </select>
         </div>
-        <div id="player-stats">
+        <div id="player-stats" class="player-stats">
             
         </div>
         </div>

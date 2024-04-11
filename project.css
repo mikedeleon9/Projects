@@ -1,45 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #2D5874;
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
 header {
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0;
+    background-color: #1976d2;
+    color: #fff;
+    background-image: linear-gradient(to right, #1976d2, #2196f3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+footer {
+    background-color: #1976d2;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+.summary{
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
 }
 
 .background-container {
-    background-color: #345563; /* Darker background for aesthetics */
-    padding: 20px;
+    padding: 40px 20px;
 }
 
+
 .container {
-    width: 80%; /* Responsive width */
-    max-width: 700px;
+    width: 80%; 
+    max-width: 800px;
     margin: auto;
-    background-color: #7EA09C; /* Lighter background for content */
-    border-radius: 8px;
-    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    
 }
 
 .selection {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #player-select {
-    padding: 8px;
+    padding: 12px;
     font-size: 16px;
+    border: none;
+    border-radius: 6px;
+
+}
+.player-stats{
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #2196f3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    display: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .player-stats h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .player-stats:hover {
+    transform: scale(1.02);
+  }
+
+.player-stats p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+.pitching{
+    margin-top: 30px;
 }
 
-#player-stats {
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #345563; /* Darker background for player stats */
-    color: white;
-    display: hidden;
-}
+.player-image {
+    max-width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    
+  }
+
+  .player-image:hover {
+    transform: scale(1.05);
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+
+  p {
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+  }
