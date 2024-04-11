@@ -15,6 +15,7 @@ header {
     color: #fff;
     background-image: linear-gradient(to right, #1976d2, #2196f3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
     
 }
 
@@ -40,22 +41,77 @@ footer {
 
 
 .container {
-    width: 80%; 
+    width: 80%;
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     padding: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-    
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 .selection {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.player-stats,
+.player-bio {
+  flex: 1; /* Each flex item takes up equal space */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  min-height: 200px; /* Set minimum height for both flex items */
+  min-height: 200px;
+  display: none;
+}
+
+
+.player-stats h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.player-stats p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.player-bio {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    
+}
+
+@media (max-width: 600px) {
+  .container {
+      flex-direction: column; /* Stack flex items vertically on smaller screens */
+      align-items: center; /* Center align flex items vertically */
+  }
+  
+  .player-stats,
+  .player-bio {
+      width: 100%; /* Make flex items full width on smaller screens */
+  }
+}
+
+
+.selection {
+    text-align: center;
+    margin-bottom: 20px;
+  
+    
+    
 }
 
 #player-select {
@@ -63,17 +119,22 @@ footer {
     font-size: 16px;
     border: none;
     border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: left;
+    
+
 
 }
 .player-stats{
-    text-align: center;
-    padding: 30px;
-    border-radius: 12px;
-    background-color: #2196f3;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    display: hidden;
-    transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #2196f3;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  width: 50%;
   }
 
   .player-stats h3 {
@@ -88,14 +149,13 @@ footer {
 .player-stats p {
     font-size: 16px;
     margin-bottom: 10px;
-    text-align: center;
+   
   }
 
 .pitching{
     margin-top: 30px;
 }
 
-<<<<<<< HEAD
 .player-image {
     max-width: 150px;
     height: 150px;
@@ -135,17 +195,19 @@ footer {
     margin-bottom: 10px;
     color: #fff;
   }
-=======
-.player-stats {
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #345563; /* Darker background for player stats */
-    color: white;
-    display: hidden;
+
+/*this is the graphic under the dropdown */
+
+.player-bio{
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+  width: 50%;
+
 }
 
-.pitching{
-    margin-top: 50px;
+.player-bio:hover{
+  transform: scale(1.02);
 }
->>>>>>> 569b8dc8363d093d3f2d8d6ef574d06433931831
