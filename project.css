@@ -95,6 +95,7 @@ footer {
     margin-top: 30px;
 }
 
+<<<<<<< HEAD
 .player-image {
     max-width: 150px;
     height: 150px;
@@ -134,3 +135,17 @@ footer {
     margin-bottom: 10px;
     color: #fff;
   }
+=======
+.player-stats {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #345563; /* Darker background for player stats */
+    color: white;
+    display: hidden;
+}
+
+.pitching{
+    margin-top: 50px;
+}
+>>>>>>> 569b8dc8363d093d3f2d8d6ef574d06433931831
