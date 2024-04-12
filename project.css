@@ -15,8 +15,6 @@ header {
     color: #fff;
     background-image: linear-gradient(to right, #1976d2, #2196f3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    
 }
 
 footer {
@@ -30,30 +28,29 @@ footer {
 
 .background-container {
     padding: 40px 20px;
-    text-align: center;
-    
+    text-align: center; 
 }
 
 
 .container {
     width: 80%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: auto;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     padding: 30px;
     display: flex;
-    
     justify-content: space-between;
-
 }
+
 
 .selection {
     text-align: center;
     margin-bottom: 20px;
     flex: 1;
 }
+
 
 .player-stats,
 .player-bio {
@@ -62,9 +59,10 @@ footer {
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  min-height: 200px; /* Set minimum height for both flex items */
+ /* Set minimum height for both flex items */
   display: none;
 }
+
 
 .player-stats{
   color: #fff;
@@ -72,16 +70,17 @@ footer {
   }
 
 
-
 .player-stats h3 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
+
 .player-stats p {
     font-size: 16px;
     margin-bottom: 10px;
 }
+
 
 .player-stats:hover {
   transform: scale(1.02);
@@ -94,13 +93,7 @@ footer {
       flex-direction: column; /* Stack flex items vertically on smaller screens */
       align-items: center; /* Center align flex items vertically */
   }
-  
-  .player-stats,
-  .player-bio {
-      width: 100%; /* Make flex items full width on smaller screens */
-  }
 }
-
 
 
 #player-select {
@@ -109,17 +102,12 @@ footer {
     border: none;
     border-radius: 6px;
     margin-bottom: 30px;
-    
-
 }
-
-
-
-
 
 .pitching{
     margin-top: 30px;
 }
+
 
 .player-image {
     max-width: 150px;
@@ -131,17 +119,15 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     object-fit: cover;
-    
+    border: 4px solid #fff;
   }
 
+  
   .player-image:hover {
     transform: scale(1.05);
   }
 
  
-  
-
-
   header h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
@@ -152,8 +138,7 @@ footer {
 
 /*this is the graphic under the dropdown */
 
-.player-bio{
-  
+.player-bio, .player-info{
   border-radius: 12px;
   background-color: #f0f0f0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -162,20 +147,10 @@ footer {
   
 }
 
-/* Potential Code
-
-justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 30px;
-  border-radius: 12px;
-  background-color: #2196f3;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  width: 50%;
-*/
-
-
 .player-bio:hover{
   transform: scale(1.02);
+}
+
+.info-div{
+  display: block;
 }
