@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hiddenWord = ['h', 'e', 'l', 'l', 'o']; // Example hidden word
     const boxes = document.querySelectorAll('.box'); // Select all box elements
     const guessInput = document.querySelector('.guess'); // Select the guess input element
+    const output = document.querySelector('.output');
 
     const submitButton = document.querySelector('.submit');
     let correctGuesses = 0; // Track the number of correct guesses
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const guess = guessInput.value.trim().toLowerCase(); // Get the trimmed and lowercased user guess
 
         if (guess.length !== hiddenWord.length) {
-            alert("Please enter a 5-letter word.");
+            output.innerHTML = "Please enter a 5-letter word.";
             return;
         }
 

@@ -11,8 +11,9 @@ body{
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 5%;
+    
     margin-bottom: 20px;
+    border: 5px solid blue;
     
 }
 
@@ -41,6 +42,8 @@ h1 {
 .box::after{
     content: attr(data-letter);
     color: transparent;
+    
+    
 }
 
 .title{
@@ -67,4 +70,16 @@ h1 {
 
 .hidden{
     color: transparent;
+}
+
+.output{
+    width: 320px;
+    height: 80px;
+    
+    margin: auto;
+    color: red;
+    font-size: 28px;
+    text-align: center;
+    
+    
 }

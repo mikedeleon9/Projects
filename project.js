@@ -172,7 +172,7 @@ const players = [
             OWAR: 6.6,
             adjustedOPS: "162",
             image: "PlayerImages/Olson.jpeg",
-            bio: "Matt Olson is a standout first baseman known for his superb defensive abilities and powerful left-handed swing. He's emerged as a key player for the Oakland Athletics, providing offensive production and stellar defense.",
+            bio: "Matt Olson is a standout first baseman known for his superb defensive abilities and powerful left-handed swing. He's emerged as the power force behind the Atlanta Braves, providing offensive production and stellar defense.",
             profileUrl: "https://www.baseball-reference.com/players/o/olsonma02.shtml",
             info: {birthplace: 'USA',
                    age: 30,
