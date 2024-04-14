@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const boxes = document.querySelectorAll('.box'); // Select all box elements
     const guessInput = document.querySelector('.guess'); // Select the guess input element
     const output = document.querySelector('.output');
+    const resetButton = document.querySelector('.reset');
 
     const submitButton = document.querySelector('.submit');
     let correctGuesses = 0; // Track the number of correct guesses
@@ -19,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (guess === hiddenWord.join('')) {
             // Iterate through each letter of the guess and reveal correct letters
             for (let i = 0; i < guess.length; i++) {
-                boxes[i].textContent = guess[i];
+                boxes[i].textContent = guess[i].toUpperCase();
                 boxes[i].classList.remove('hidden');
             }
-            alert("Congratulations! You guessed the word.");
+            output.innerHTML = "Congratulations you guessed the word!";
             // Disable further input after correct guess
             guessInput.disabled = true;
             submitButton.disabled = true;
@@ -47,5 +48,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clear the input field after processing the guess
         guessInput.value = '';
+
+        
     });
+    resetButton.addEventListener('click', ()=>{
+        output.innerHTML = '';
+        guessInput.disabled = false;
+        submitButton.disabled = false;
+        correctGuesses = 0;
+
+        boxes.forEach(box=>{
+            box.textContent = '';
+            box.classList.add('hidden');
+        })
+    })
 });
