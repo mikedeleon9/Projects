@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const hiddenWord = ['h', 'e', 'l', 'l', 'o']; // Example hidden word
+    const hiddenWord = ['p', 'o', 'w', 'e', 'r']; // Example hidden word
     const boxes = document.querySelectorAll('.box'); // Select all box elements
     const output = document.querySelector('.output');
     let currentIndex = 0;
@@ -34,17 +34,29 @@ document.addEventListener('DOMContentLoaded', () => {
             output.textContent = "Please enter a 5-letter word.";
             return;
         }
+        boxes.forEach((box, index) => {
+            if (box.textContent && guess[index] !== hiddenWord[index]) {
+                box.textContent = ''; // Clear incorrect letter
+                box.classList.remove('correct', 'incorrect'); // Remove any previous styling
+            }
+        });
 
         let allCorrect = true;
+        let firstIncorrectIndex = -1;
 
         for (let i = 0; i < guess.length; i++) {
             if (guess[i] === hiddenWord[i]) {
                 boxes[i].classList.add('correct');
                 boxes[i].classList.remove('incorrect');
+                boxes[i].contentEditable = false; // Disable editing for correct boxes
             } else {
                 boxes[i].classList.add('incorrect');
                 boxes[i].classList.remove('correct');
                 allCorrect = false;
+
+                if (firstIncorrectIndex === -1){
+                    firstIncorrectIndex = i; //set first incorrect index
+                }
             }
         }
 
@@ -60,6 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (remainingAttempts === 0) {
                 endGame(); // Call endGame function when no attempts left
+            }
+            else {
+                if(firstIncorrectIndex !== -1){
+                    boxes[firstIncorrectIndex].focus(); //set focus to first incorrect box
+                }
             }
         }
     }
