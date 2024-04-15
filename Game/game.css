@@ -91,3 +91,13 @@ h1 {
     border-radius: 5px;
     
 }
+
+.correct{
+    color: white;
+    background-color: green;
+}
+
+.incorrect{
+    color: red;
+    background-color: red;
+}

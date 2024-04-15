@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const guessInput = document.querySelector('.guess'); // Select the guess input element
     const output = document.querySelector('.output');
     const resetButton = document.querySelector('.reset');
-
     const submitButton = document.querySelector('.submit');
     let correctGuesses = 0; // Track the number of correct guesses
 
@@ -16,50 +15,50 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        let allCorrect = true;
+
         // Check if the guessed word matches the hidden word
-        if (guess === hiddenWord.join('')) {
-            // Iterate through each letter of the guess and reveal correct letters
-            for (let i = 0; i < guess.length; i++) {
+        for (let i = 0; i < guess.length; i++) {
+            if (guess[i] === hiddenWord[i]) {
                 boxes[i].textContent = guess[i].toUpperCase();
-                boxes[i].classList.remove('hidden');
+                boxes[i].classList.remove('hidden', 'incorrect');
+                boxes[i].classList.add('correct');
+            } else {
+                boxes[i].textContent = guess[i].toUpperCase();
+                boxes[i].classList.remove('hidden', 'correct');
+                boxes[i].classList.add('incorrect');
+                allCorrect = false;
             }
+        }
+
+        if (allCorrect) {
             output.innerHTML = "Congratulations you guessed the word!";
-            // Disable further input after correct guess
             guessInput.disabled = true;
             submitButton.disabled = true;
+            boxes.forEach(box => box.contentEditable = false);
         } else {
-            // Increment correctGuesses if the guessed word contains correct letters
-            for (let i = 0; i < guess.length; i++) {
-                if (guess[i] === hiddenWord[i]) {
-                    boxes[i].textContent = guess[i];
-                    boxes[i].classList.remove('hidden');
-                    correctGuesses++;
-                }
-            }
-
-            // Check if the user has reached the maximum number of attempts (6)
+            output.innerHTML = "Some letters are incorrect. Try again.";
+            correctGuesses++;
             if (correctGuesses >= 6) {
                 alert("Sorry, you've used all your attempts. The hidden word was: " + hiddenWord.join(''));
-                // Disable further input after maximum attempts
                 guessInput.disabled = true;
                 submitButton.disabled = true;
             }
         }
 
-        // Clear the input field after processing the guess
         guessInput.value = '';
-
-        
     });
-    resetButton.addEventListener('click', ()=>{
+
+    resetButton.addEventListener('click', () => {
         output.innerHTML = '';
         guessInput.disabled = false;
         submitButton.disabled = false;
         correctGuesses = 0;
 
-        boxes.forEach(box=>{
+        boxes.forEach(box => {
             box.textContent = '';
+            box.classList.remove('correct', 'incorrect');
             box.classList.add('hidden');
-        })
-    })
+        });
+    });
 });
