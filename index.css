@@ -10,3 +10,7 @@ a:link{
 a:visited{
     color: #4287f5;
 }
+
+a:active{
+    color: white;
+}
