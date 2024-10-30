@@ -2,16 +2,55 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: "Roboto", sans-serif;
 }
 main{
-    border: 2px solid hotpink;
     height: 100vh;
     display: grid;
     grid-template-columns: 15% 85%;
     
 }
 
-h2, p{
-    display: inline;
+#sidebar{
+    border: 2px solid blueviolet;
+    padding: 1.5rem;
+    background-color: #0ea5e9;
+    color: white;
 }
+
+h2{
+    font-size: 1.5rem;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mdi-view-dashboard{
+    font-size: 2.5rem;
+    
+}
+
+.top-portion-sidebar{
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.top-portion-sidebar > div{
+    
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+ .top-portion-sidebar > div > i, .top-portion-sidebar > div > p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
