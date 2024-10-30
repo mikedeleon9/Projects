@@ -1,0 +1,248 @@
+*{
+    --gray: #9FA1A1;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   color: #363738;
+    font-family: "Itim" , sans-serif;
+    background: rgb(112,216,248);
+    transition: background 0.4s, color 0.4s, opacity 1s ease, max-height 1s ease;
+  }
+  
+  .main-container{
+    position: relative;
+    transition: .4s;
+    border-radius: 0.5rem;
+    background: #eee;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    z-index: 5;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 35px -15px;
+    transition: background 0.4s, color 0.4s;
+ /*   background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%); */
+    
+  }
+
+  
+ 
+  .weather-search-button{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    gap: 15px;
+  }
+  
+  
+  
+  
+  
+  .search-weather{
+    border: 1px solid grey;
+    border-radius: 10px;
+    background: #F8F9F9;
+    height: 30px;
+    margin-top: 2rem;
+  }
+  
+  .search-weather:focus{
+    outline: 2px solid grey;
+  }
+  
+  .weather-icon{
+    max-width: 1rem;
+    max-height: 1rem;
+    padding: 10px;
+    margin: 20px;
+    
+   
+  }
+  
+  .custom-icon{
+    max-width: 8rem;
+    position: absolute;
+    left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  
+  margin-bottom: 3rem;
+  }
+  
+  
+  .weather-conditions{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;
+    transition: color 0.4s, opacity 1s ease, max-height 1s ease;
+    color: grey;
+    
+   
+  }
+
+  .weather-conditions div{
+    
+    transition: color 0.4s, opacity 1s ease, max-height 1s ease;
+
+  }
+  
+
+  
+  .temp{
+    font-size: 75px;
+    font-weight: 600;
+    transition: color 0.4s, opacity 1s ease, max-height 1s ease;
+   margin-left: 1rem;
+    flex: 1;
+    
+  }
+  
+  .city{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+  }
+  
+
+  .input-container{
+    position: relative;
+   
+    
+  }
+  
+  .material-symbols-outlined {
+    position: absolute;
+    left: 140px; /* Adjust position as needed */
+    top: 70%;
+    transform: translateY(-50%);
+    color: grey;
+    
+  }
+  
+  /* input elements below*/
+  
+  .input{
+    visibility: hidden;
+  }
+  
+  
+  
+  .label{
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background-color: lightgray;
+    border-radius: 20px;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  
+  
+  .circle{
+    width: 17px;
+    background-color: white;
+    height: 15px;
+    border-radius: 50%;
+    top: 2px;
+    position: absolute;
+    left: 3px;
+    animation: toggleOff 0.4s linear forwards;
+  }
+  
+  .input:checked + .label{
+    background-color: white;
+  }
+  
+  .input:checked + .label .circle{
+    animation: toggleOn 0.4s linear forwards;
+    background-color: black;
+  }
+  
+  @keyframes toggleOn{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(20px);
+    }
+  }
+  
+  @keyframes toggleOff {
+    0%{
+      transform: translateX(20px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+  
+  .tooltip-container {
+    position: absolute;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+   
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%; /* Position the tooltip above the checkbox */
+    left: 50%;
+    margin-left: -50px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .today-date{
+    font-size: 16px;
+    color: #9FA1A1  ;
+    font-weight: 800;
+    transition: color 0.4s, opacity 1s ease, max-height 1s ease;
+    
+  }
+
+
+.middle-section{
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    width: 100%;
+    justify-content: space-evenly;
+    transition: color 0.4s, opacity 1s ease, max-height 1s ease;
+    
+}
+
+hr{
+    width: 100%;
+    border: 2px solid var(--gray);;
+    display: none;
+    margin-top: 2em;
+    
+}

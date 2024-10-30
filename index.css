@@ -1,0 +1,23 @@
+body{
+    background: #313638;
+    color: white;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a:visited{
+    color: white;
+}
+
+
+a:link{
+    color: white;
+}
+
+
+a:active{
+    color: white;
+}
+
