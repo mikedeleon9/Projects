@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+main{
+    border: 2px solid hotpink;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    
+}
+
+h2, p{
+    display: inline;
+}

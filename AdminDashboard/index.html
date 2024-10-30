@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main>
         <div id="sidebar">
-            <h2>Dashboard</h2>
-            <div class="top-portion-sidebar"></div>
+            <i class="mdi mdi-view-dashboard"></i><h2>Dashboard</h2>
+            <div class="top-portion-sidebar">
+                <i class="mdi mdi-home"></i><p>Home</p>
+                <i class="mdi mdi-card-account-mail-outline"></i><p>Profile</p>
+                <i class="mdi mdi-message-reply"></i><p>Messages</p>
+                <i class="mdi mdi-clock-time-three-outline"></i><p>History</p>
+                <i class="mdi mdi-note-multiple-outline"></i><p>Tasks</p>
+                <i class="mdi mdi-account-group"></i><p>Communities</p>
+            </div>
             <div class="bottom-portion-sidebar"></div>
         </div>
         <div class="main-page">
@@ -18,8 +27,17 @@
                 <div class="upper-topbar">
                     <input type="search">
                     <p>Mike De Leon</p>
+                    
                 </div>
-                <div class="bottom-topbar"></div>
+                <div class="bottom-topbar">
+                    <div class="left-bottom-topbar">Hi there, Mike De Leon (@mike)</div>
+                    
+                    <div class="right-bottom-topbar">
+                        <button>New</button>
+                        <button>Upload</button>
+                        <button>Share</button>
+                    </div>
+                </div>
             </div>
             <div class="main-content"></div>
         </div>
